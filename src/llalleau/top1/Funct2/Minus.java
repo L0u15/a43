@@ -5,22 +5,22 @@ import llalleau.top1.Funct0.Var;
 
 public class Minus extends Funct2 {
 
-	public Minus(Function f1, Function f2) {
-		super(f1, f2);
+	public Minus(Function leftFunction, Function rightFunction) {
+		super(leftFunction, rightFunction);
 	}
 
 	@Override
 	public double getValue() {
-		return this.getF1().getValue() - this.getF2().getValue();
+		return this.getLeftFunction().getValue() - this.getRightFunction().getValue();
 	}
 
 	@Override
 	public String toString() {
-		return "(" + this.getF1().toString() + "-" + this.getF2().toString() + ")";
+		return this.getLeftFunction() + "-" + this.getRightFunction();
 	}
 
 	@Override
 	public Function getDiff(Var x) {
-		return new Minus(this.getF1().getDiff(x), this.getF2().getDiff(x));
+		return new Minus(this.getLeftFunction().getDiff(x), this.getRightFunction().getDiff(x));
 	}
 }

@@ -10,11 +10,11 @@ public class Cos extends Funct1 {
 
 	@Override
 	public double getValue() {
-		return Math.cos(this.getF().getValue());
+		return Math.cos(this.getFunction().getValue());
 	}
 	@Override
 	public String toString() {
-		return "cos " + this.getF().toString();
+		return "cos " + this.getFunction();
 	}
 
 }

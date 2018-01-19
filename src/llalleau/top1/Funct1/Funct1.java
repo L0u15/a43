@@ -4,14 +4,14 @@ import llalleau.top1.Function;
 
 public abstract class Funct1 implements Function {
 
-	private Function f;
+	private Function function;
 
 	public Funct1(Function f) {
-		this.f = f;
+		this.function = f;
 	}
 
-	public Function getF() {
-		return f;
+	public Function getFunction() {
+		return function;
 	}
 }
 

@@ -12,12 +12,12 @@ public class Sqr extends Funct1 {
 
 	@Override
 	public double getValue() {
-		return Math.pow(this.getF().getValue(), TWO);
+		return Math.pow(this.getFunction().getValue(), TWO);
 	}
 	
 	@Override
 	public String toString() {
-		return "(" + this.getF().toString()+")Â²";
+		return "(" + this.getFunction()+")²";
 	}
 
 }

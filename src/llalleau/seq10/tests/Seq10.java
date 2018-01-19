@@ -19,7 +19,7 @@ class Seq10 {
 		Var x = new Var("x");
 		Var y = new Var("y");
 		this.f = new Plus(x, new Mul(new Val(2), y));
-		assertEquals("(x+(2.0*y))", this.f.toString());
+		assertEquals("x+2.0*y", this.f.toString());
 
 		x.setValue(0);
 		y.setValue(0);
@@ -40,7 +40,7 @@ class Seq10 {
 		Var y = new Var("y");
 		Var z = new Var("z");
 		this.g = new Plus(new Sqr(x), new Plus(new Sqr(y), new Sqr(z)));
-		assertEquals("((x)Â²+((y)Â²+(z)Â²))", this.g.toString());
+		assertEquals("(x)²+(y)²+(z)²", this.g.toString());
 
 		x.setValue(0);
 		y.setValue(0);
@@ -62,7 +62,7 @@ class Seq10 {
 	void testH() {
 		Var x = new Var("x");
 		this.h = new Plus(new Sin(x), new Val(5));
-		assertEquals("(sin x+5.0)", this.h.toString());
+		assertEquals("sin x+5.0", this.h.toString());
 
 		x.setValue(0);
 		assertEquals(5, this.h.getValue());
@@ -75,7 +75,8 @@ class Seq10 {
 	void testK() {
 		Var x = new Var("x");
 		this.k = new Plus(new Sqr(new Sin(x)), new Sqr(new Cos(x)));
-
+		assertEquals("(sin x)²+(cos x)²", this.k.toString());
+		
 		for (double d = 0; d <= 1; d += 0.05) {
 			x.setValue(d);
 			assertEquals(1, this.k.getValue(), 0.00000001);

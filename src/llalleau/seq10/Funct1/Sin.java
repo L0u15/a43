@@ -10,12 +10,12 @@ public class Sin extends Funct1 {
 
 	@Override
 	public double getValue() {
-		return Math.sin(this.getF().getValue());
+		return Math.sin(this.getFunction().getValue());
 	}
 
 	@Override
 	public String toString() {
-		return "sin " + this.getF().toString();
+		return "sin " + this.getFunction();
 	}
 
 }

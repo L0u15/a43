@@ -4,13 +4,13 @@ import llalleau.seq10.Function;
 
 public abstract class Funct1 implements Function {
 
-	private Function f;
+	private Function function;
 
-	public Funct1(Function f) {
-		this.f = f;
+	public Funct1(Function function) {
+		this.function = function;
 	}
 
-	public Function getF() {
-		return f;
+	public Function getFunction() {
+		return function;
 	}
 }

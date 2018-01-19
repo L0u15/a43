@@ -12,12 +12,12 @@ public class Inv extends Funct1 {
 
 	@Override
 	public double getValue() {
-		return ONE / this.getF().getValue();
+		return ONE / this.getFunction().getValue();
 	}
 
 	@Override
 	public String toString() {
-		return "1/" + this.getF().getValue();
+		return "1/(" + this.getFunction() + ")";
 	}
 
 }

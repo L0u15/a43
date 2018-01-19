@@ -10,11 +10,11 @@ public class Plus extends Funct2 {
 
 	@Override
 	public double getValue() {
-		return this.getF1().getValue() + this.getF2().getValue();
+		return this.getLeftFunction().getValue() + this.getRightFunction().getValue();
 	}
 
 	@Override
 	public String toString() {
-		return "("+this.getF1().toString() + "+" + this.getF2().toString()+")";
+		return this.getLeftFunction() + "+" + this.getRightFunction();
 	}
 }

@@ -13,18 +13,18 @@ public class Cos extends Funct1 {
 
 	@Override
 	public double getValue() {
-		return Math.cos(this.getF().getValue());
+		return Math.cos(this.getFunction().getValue());
 	}
 
 	@Override
 	public String toString() {
-		return "cos " + this.getF().toString();
+		return "cos " + this.getFunction();
 	}
 
 	@Override
 	public Function getDiff(Var x) {
-		Function uPrime = this.getF().getDiff(x);
-		Function sinU = new Sin(this.getF());
+		Function uPrime = this.getFunction().getDiff(x);
+		Function sinU = new Sin(this.getFunction());
 		return new Mul(new Val(-1.0), new Mul(uPrime, sinU));
 	}
 }

@@ -10,11 +10,11 @@ public class Sqrt extends Funct1 {
 
 	@Override
 	public double getValue() {
-		return Math.sqrt(this.getF().getValue());
+		return Math.sqrt(this.getFunction().getValue());
 	}
 	@Override
 	public String toString() {
-		return "sqrt " + this.getF().toString();
+		return "sqrt " + this.getFunction();
 	}
 
 

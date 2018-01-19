@@ -15,16 +15,16 @@ public class Inv extends Funct1 {
 
 	@Override
 	public double getValue() {
-		return ONE / this.getF().getValue();
+		return ONE / this.getFunction().getValue();
 	}
 
 	@Override
 	public String toString() {
-		return "1/" + this.getF().getValue();
+		return "1/(" + this.getFunction() + ")";
 	}
 
 	@Override
 	public Function getDiff(Var x) {
-		return new Mul(new Val(-1.0),new Mul(this.getF(),new Inv(new Sqr(this.getF()))));
+		return new Mul(new Val(-1.0),new Mul(this.getFunction(),new Inv(new Sqr(this.getFunction()))));
 	}
 }
