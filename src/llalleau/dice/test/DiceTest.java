@@ -102,4 +102,16 @@ class DiceTest {
 		}
 		System.out.println();
 	}
+
+	@Test
+	void TrickDiceTest() {
+		Dice d = Dice.trickDice(6);
+		System.out.print("Result trick dice 6 :");
+		for (int i = 0; i < 100; i++) {
+			int result = d.roll();
+			System.out.print(" " + result);
+			assertTrue(result == 6);
+		}
+		System.out.println();
+	}
 }
